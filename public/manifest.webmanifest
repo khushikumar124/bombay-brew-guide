@@ -1,0 +1,25 @@
+{
+  "name": "Bombay Brew Guide",
+  "short_name": "Brew Guide",
+  "description": "A coffee-first way to discover cafés, roasteries and coffee bars across Mumbai, Thane and Navi Mumbai.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8EF",
+  "theme_color": "#E39187",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
