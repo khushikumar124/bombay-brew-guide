@@ -123,7 +123,7 @@ export function MapView({ places, activePlaceId, userLocation, focusLocation }: 
               icon={createCoffeeIcon(place.placeType, place.id === activePlaceId)}
             >
               <Popup minWidth={240} maxWidth={260}>
-                <MapPreviewCard place={place} distanceLabel={distanceLabel} />
+                <MapPreviewCard place={place} distanceLabel={distanceLabel} userLocation={userLocation} />
               </Popup>
             </Marker>
           )

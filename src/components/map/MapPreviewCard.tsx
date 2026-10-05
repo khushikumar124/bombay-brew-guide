@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom'
-import { MapPin, ArrowRight } from 'lucide-react'
+import { MapPin, ArrowRight, Navigation } from 'lucide-react'
 import type { CoffeePlace } from '../../types/coffee'
+import type { LatLng } from '../../utils/distance'
+import { getDirectionsUrl } from '../../utils/directions'
 import { Rating } from '../ui/Rating'
 import { SaveButton } from '../ui/CollectionButtons'
 import { PlaceImage } from '../place/PlaceImage'
 
-export function MapPreviewCard({ place, distanceLabel }: { place: CoffeePlace; distanceLabel?: string }) {
+interface MapPreviewCardProps {
+  place: CoffeePlace
+  distanceLabel?: string
+  userLocation?: LatLng | null
+}
+
+export function MapPreviewCard({ place, distanceLabel, userLocation }: MapPreviewCardProps) {
   return (
     <div className="w-[240px] overflow-hidden rounded-xl">
       <div className="relative h-28 w-full">
@@ -29,13 +37,25 @@ export function MapPreviewCard({ place, distanceLabel }: { place: CoffeePlace; d
           {distanceLabel && <span className="text-espresso-soft/60">· {distanceLabel}</span>}
         </p>
         <Rating rating={place.rating} reviewCount={place.reviewCount} size={12} />
-        <Link
-          to={`/place/${place.id}`}
-          className="mt-1 flex items-center justify-center gap-1 rounded-full bg-espresso py-1.5 text-[12.5px] font-semibold text-cream transition-opacity hover:opacity-90"
-        >
-          View profile
-          <ArrowRight size={13} />
-        </Link>
+        <div className="mt-1 flex gap-1.5">
+          <Link
+            to={`/place/${place.id}`}
+            className="flex flex-1 items-center justify-center gap-1 rounded-full bg-espresso py-1.5 text-[12.5px] font-semibold text-cream transition-opacity hover:opacity-90"
+          >
+            View profile
+            <ArrowRight size={13} />
+          </Link>
+          <a
+            href={getDirectionsUrl(place, userLocation)}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Get directions to ${place.name} on Google Maps`}
+            className="flex flex-1 items-center justify-center gap-1 rounded-full border-2 border-line bg-white/70 py-1.5 text-[12.5px] font-semibold text-espresso transition-colors hover:border-clay"
+          >
+            <Navigation size={12} />
+            Directions
+          </a>
+        </div>
       </div>
     </div>
   )

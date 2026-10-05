@@ -159,10 +159,10 @@ Coffee, Kala Ghoda Café, Cafe Madras, Prithvi Cafe, Cafe Mondegar, Kyani & Co.,
 Coffee, Wonder's Cafe, Mimi Cafe & Bistro, and others), compiled from public sources
 rather than a live, continuously-verified directory:
 
-- `addressVerified: true` (135 of 181 places) means the exact street address was confirmed
+- `addressVerified: true` (142 of 181 places) means the exact street address was confirmed
   either from the brand's own official store-locator page, or corroborated by two or more
   independent, reputable sources. These are shown plainly on the place's page.
-- `addressVerified: false` (46 of 181 places) means the neighbourhood is correct but the
+- `addressVerified: false` (39 of 181 places) means the neighbourhood is correct but the
   exact street address was not independently confirmed in the time available — the app
   shows an explicit "check before you go" note on these in the UI. This is deliberate:
   a wrong phone number or address for a real business is worse than an honest gap.
@@ -177,16 +177,16 @@ rather than a live, continuously-verified directory:
   cross-checked. That mismatch is why this dataset leans on official pages and
   cross-source corroboration rather than any single aggregator, and why unconfirmed
   fields are left blank instead of filled with a plausible-sounding guess.
-- **A note on the photos:** `imageVerified: true` (19 of 181 places — Subko Bandra, Cafe
+- **A note on the photos:** `imageVerified: true` (21 of 181 places — Subko Bandra, Cafe
   Mondegar, Britannia & Co., Yazdani Bakery, Bombay to Barcelona Library Café, YVR Café,
   Mimi Cafe & Bistro, Toise, Araku Coffee, The Craftery by Subko, Bombay Coffee House,
   Bustling Brew Bistro Cafe, Boojee Cafe, Jimmy Boy, The Nutcracker — Kala Ghoda, Candies,
   Blue Tokai Coffee Roasters — Bandra, Starbucks — Taj Mahal Palace Colaba, and
-  Starbucks — Kala Ghoda) means
+  Starbucks — Kala Ghoda, plus Cafe Madras and Prithvi Cafe via captioned Wikimedia Commons photos) means
   the `image` was confirmed to be a real photo of
   that specific venue, sourced from that venue's own website, a captioned/geotagged photo
   of that exact spot, or (for the last 3) that specific outlet's own Google Maps listing
-  photo. The other 162 places use **representative stock photography** of the
+  photo. The other 160 places use **representative stock photography** of the
   relevant style of space (roastery, Irani café, specialty coffee bar, etc.), not a
   verified photograph of that specific venue — the UI marks these explicitly. Chain
   branches (Blue Tokai, Third Wave, abCoffee, Starbucks, CCD, Barista, Kruti Coffee, and
@@ -246,7 +246,7 @@ The app is intentionally structured so the following can be added without a rewr
 
 ## Known limitations (MVP scope)
 
-- 135 of 181 places have a fully confirmed street address; the rest are neighbourhood-
+- 142 of 181 places have a fully confirmed street address; the rest are neighbourhood-
   accurate with the exact address flagged as unverified in the UI — see §9.
 - Coverage spans Mumbai, Thane, and the wider Navi Mumbai / MMR area (Kharghar, Vashi,
   CBD Belapur, Nerul, Airoli, Ghansoli, Mira-Bhayandar, Panvel, Kalyan-Dombivli, Ambernath),

@@ -13,6 +13,7 @@ import {
   Star,
 } from 'lucide-react'
 import { COFFEE_PLACES } from '../data/places'
+import { getDirectionsUrl } from '../utils/directions'
 import { Rating } from '../components/ui/Rating'
 import { TagPill } from '../components/ui/TagPill'
 import { SaveButton, VisitedButton } from '../components/ui/CollectionButtons'
@@ -46,13 +47,7 @@ export function PlacePage() {
     )
   }
 
-  // When we have a confirmed exact address, let Google resolve the destination by
-  // name + address (matches its own business listing precisely) rather than our
-  // stored lat/lng, which is only ever an approximation. Unverified addresses fall
-  // back to coordinates since we don't have anything more precise to offer.
-  const directionsUrl = place.addressVerified
-    ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${place.name}, ${place.address}`)}`
-    : `https://www.google.com/maps/dir/?api=1&destination=${place.latitude},${place.longitude}`
+  const directionsUrl = getDirectionsUrl(place)
   const reviewUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${place.name} ${place.area} Mumbai`)}`
 
   return (

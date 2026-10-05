@@ -67,14 +67,14 @@ export function AboutPage() {
           guessed at from a plausible-looking format.
         </p>
         <p className="mt-3">
-          <strong className="font-semibold text-espresso">A note on the photos:</strong> 19 of 181
+          <strong className="font-semibold text-espresso">A note on the photos:</strong> 21 of 181
           places have a confirmed photo of the actual venue, sourced from that specific place's own
           website or from a captioned, geotagged photo of that exact spot — for those, the image is
           a real photograph of the venue itself. For the rest, a place's page marks the image
           "Representative stock photo, not this exact venue": it's stock photography of the
           relevant style of space (roastery, Irani café, specialty coffee bar, etc.), not a
           verified photograph of the venue itself. A chain having a nice photo of one branch isn't
-          enough to mark another branch's page verified — each of the 19 was confirmed against that
+          enough to mark another branch's page verified — each of the 21 was confirmed against that
           specific location.
         </p>
       </div>
